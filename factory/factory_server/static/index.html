@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Factory</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Factory <span class="muted" id="repo"></span></div>
+    <div class="topbar-right">
+      <span class="muted" id="config"></span>
+      <button id="scan" class="btn">Scan task folder</button>
+    </div>
+  </header>
+  <main class="layout">
+    <aside class="tasklist">
+      <div class="pane-title">Tasks</div>
+      <ul id="tasks"></ul>
+      <p id="no-tasks" class="muted empty" hidden>No tasks yet. Drop a <code>.txt</code> file in <code>factory/task/</code>.</p>
+    </aside>
+    <section class="detail" id="detail">
+      <p class="muted empty">Select a task.</p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
