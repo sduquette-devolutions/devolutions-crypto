@@ -1,0 +1,34 @@
+{
+  "name": "reviewer",
+  "description": "Verifies the artifact proves passing tests, reviews the code against the task requirements, and decides accept or retry.",
+  "system_prompt": "system_prompt.md",
+  "references": [
+    "references/review-checklist.md",
+    "../builder/references/artifact-format.md",
+    "../builder/references/project-guide.md"
+  ],
+  "prompt_template": "prompt_template.md",
+  "model": null,
+  "permission_mode": "acceptEdits",
+  "allowed_tools": [
+    "Read",
+    "Write",
+    "Glob",
+    "Grep",
+    "Bash(cargo:*)",
+    "Bash(git log:*)",
+    "Bash(git diff:*)",
+    "Bash(git show:*)",
+    "Bash(git status:*)",
+    "Bash(git rev-parse:*)",
+    "Bash(python:*)"
+  ],
+  "disallowed_tools": [
+    "Edit",
+    "Bash(git commit:*)",
+    "Bash(git checkout:*)",
+    "Bash(git reset:*)",
+    "Bash(git push:*)"
+  ],
+  "timeout_minutes": 45
+}

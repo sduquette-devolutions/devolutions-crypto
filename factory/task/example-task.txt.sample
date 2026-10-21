@@ -1,0 +1,7 @@
+Add a round-trip test for asymmetric ciphertext with an empty payload
+
+Add a unit test in src/ciphertext that generates a key pair, encrypts an empty
+byte slice with `encrypt_asymmetric` using the latest version, decrypts it with
+`decrypt_asymmetric`, and asserts the result is empty. Do not change library
+code unless the test reveals a bug; if it does, fix the bug and explain it in
+the artifact.
