@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased] -
 
+
+## [0.10.3] - 2026-10-26
+
+- Low-order X25519 public keys are now rejected
+- The default Argon2 memory cost was raised to the OWASP minimum recommended values (19 MiB)
+
 ## [0.10.2] - 2026-09-14
 
 - Fix a double free in the C# wrapper
